@@ -1,0 +1,14 @@
+[
+  {
+    "userName": "test@qabrains.com",
+    "password": "Password123"
+  },
+  {
+    "userName": "practice@qabrains.com",
+    "password": "Password123"
+  },
+  {
+    "userName": "student@qabrains.com",
+    "password": "Password123"
+  }
+]
