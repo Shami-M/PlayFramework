@@ -1,5 +1,5 @@
 import {test, expect} from '@playwright/test';
-import dataDriven from '../../testdata/dataDriven.json';
+import dataDriven from '../../../testdata/dataDriven.json';
 
 const testData = [
   { userName: "test@qabrains.com", password: "Password123" },

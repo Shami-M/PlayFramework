@@ -16,7 +16,7 @@ function readJson(filePath:string){
 test('Schecma validation', async({request})=>{
 //Website: https://restful-booker.herokuapp.com/apidoc/index.html
 
-const response = await request.get('https:mocktarget.apigee.net/json');
+const response = await request.get('https://mocktarget.apigee.net/json');
 const responseBody = await response.json();
 console.log(responseBody);
 

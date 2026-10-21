@@ -16,7 +16,7 @@ dotenv.config({
  */
 export default defineConfig({
   testDir: "./tests",
-  //retries:2,
+  //retries: 2,  // This will only work when you run via terminal
   /* Run tests in files in parallel */
   fullyParallel: false,
   //workers:4,
@@ -36,12 +36,13 @@ export default defineConfig({
   use: {
     /* Base URL to use in actions like `await page.goto('')`. */
     // baseURL: 'https://practice.qabrains.com',
-    baseURL: 'https://practice.expandtesting.com/',
-    headless: true,
+    //baseURL: 'https://practice.expandtesting.com/',
+    baseURL: process.env.BASE_URL,
+    headless: false,
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
    // trace: "on-first-retry",
     //  screenshot: "only-on-failure",
-    //  video:'retain-on-failure',
+     video:'retain-on-failure',
      trace: "retain-on-failure",
   },
 

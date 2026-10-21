@@ -3,6 +3,7 @@ import { studentUserPage } from '../pages/OOP/studentUserPage'
 import { practiceUserPaqge } from '../pages/OOP/practiceUserPage';
 
 test.describe('Example for OOP Concepts', async()=>{
+  //  test.describe.configure({retries:2})
 test('Login As Student User', async({page})=>{
     const student = new studentUserPage(page);
 

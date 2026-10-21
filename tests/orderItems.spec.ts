@@ -1,12 +1,12 @@
 import{test} from '@playwright/test';
 import { AddToCartHelper } from '../helpers/addToCartHelper';
 import credentials from '../testdata/credentials.json'
-import { LoginPage } from '../pages/loginPage';
+import { LoginPage } from '../pages/LoginPage';
 import { AddItemsPage } from '../pages/AddItemsPage';
 import { EditItemsInAddToCart } from '../pages/EditItemsInAddToCart';
 import { CheckoutPage } from '../pages/CheckoutPage';
 
-test('Order items', async({page})=>{
+test('Order items - Using POM along with a helper class', async({page})=>{
     const loginPage = new LoginPage(page);
     const addItemsPage = new AddItemsPage(page);
     const edititemsInAddToCart = new EditItemsInAddToCart(page)
