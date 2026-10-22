@@ -78,16 +78,6 @@ test('Screenshots', async({page})=>{
 
 })
 
-//Not working
-// test('Multioptional dropdown selection', async({page})=>{
-//     await page.goto('https://semantic-ui.com/modules/dropdown.html');
-//     await expect(page.locator('h1')).toContainText('Dropdown');
-
-//   //  await page.locator('select[name="skills"]').click();
-//     await page.locator('select[name="skills"]').first().click();
-//     //.selectOption(['css', 'node']);
-// })
-
 test('Click button right', async({page})=>{
 
     await page.goto('https://testing.qaautomationlabs.com/notifications.php');
@@ -105,15 +95,15 @@ test('Hover and Keyboard Actions', async({page})=>{
     await basicTab.click();
     await expect(basicTab).toHaveAttribute('aria-selected', 'true');
 
-    // //Hover
-    // const hoverItem1 = await page.getByText('Hover Item 1');
-    // await hoverItem1.hover();
-    // //Get the hoverd value
-    // const hoverItem1Value = await page.getByText('(Hovered!)');
-    // await expect(hoverItem1Value).toBeVisible();
+    //Hover
+    const hoverItem1 = page.getByText('Hover Item 1');
+    await hoverItem1.hover();
+    //Get the hoverd value
+    const hoverItem1Value = page.getByText('(Hovered!)');
+    await expect(hoverItem1Value).toBeVisible();
 
     //KeyBoard Actions --- Volume Control bar
-    const slider = await page.locator('span[data-slot="slider-track"]').nth(1);
+    const slider = page.locator('span[data-slot="slider-track"]').nth(1);
     await slider.click();
     await page.keyboard.press('ArrowRight');
 
